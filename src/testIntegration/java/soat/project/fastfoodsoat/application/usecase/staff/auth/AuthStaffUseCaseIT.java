@@ -63,9 +63,10 @@ public class AuthStaffUseCaseIT {
 
         // Then
         assertNotNull(actualOutput);
-        assertNotNull(actualOutput.accessToken());
-        assertNotNull(actualOutput.tokenType());
-        assertNotNull(actualOutput.expiresIn());
+        assertNotNull(actualOutput.name());
+        assertNotNull(actualOutput.email());
+        assertNotNull(actualOutput.cpf());
+        assertNotNull(actualOutput.roles());
     }
 
     @Test
@@ -87,9 +88,10 @@ public class AuthStaffUseCaseIT {
 
         // Then
         assertNotNull(actualOutput);
-        assertNotNull(actualOutput.accessToken());
-        assertNotNull(actualOutput.tokenType());
-        assertNotNull(actualOutput.expiresIn());
+        assertNotNull(actualOutput.name());
+        assertNotNull(actualOutput.email());
+        assertNotNull(actualOutput.cpf());
+        assertNotNull(actualOutput.roles());
     }
 
     @Test
