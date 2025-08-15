@@ -1,0 +1,43 @@
+name: Docker Build & Push
+
+on:
+  workflow_call:
+    inputs:
+      image_name:
+        required: true
+        type: string
+      image_tag:
+        required: true
+        type: string
+    secrets:
+      DOCKERHUB_LOGIN:
+        required: true
+      DOCKERHUB_TOKEN:
+        required: true
+
+jobs:
+
+  docker:
+    name: Build and Push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_LOGIN }}" --password-stdin
+
+      - name: Build image
+        run: docker build -t ${{ inputs.image_name }}:${{ inputs.image_tag }} .
+
+      - name: Scan image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ inputs.image_name }}:${{ inputs.image_tag }}
+          severity: CRITICAL
+          ignore-unfixed: true
+          format: table
+          exit-code: 1 # Fail the job if critical vulnerabilities are found
+
+      - name: Push image
+        run: docker push ${{ inputs.image_name }}:${{ inputs.image_tag }}
