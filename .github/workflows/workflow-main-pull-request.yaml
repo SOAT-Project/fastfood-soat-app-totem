@@ -23,4 +23,4 @@ jobs:
       pr_url: ${{ github.event.pull_request.html_url }}
       pr_author: ${{ github.event.pull_request.user.login }}
     secrets:
-      DISCORD_WEBHOOK: ${{ secrets.DISCORD_PULLREQUEST_WEBHOOK }}
+      DISCORD_PULLREQUEST_WEBHOOK: ${{ secrets.DISCORD_PULLREQUEST_WEBHOOK }}

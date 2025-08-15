@@ -29,4 +29,4 @@ jobs:
     with:
       build_status: ${{ needs.docker.result }}
     secrets:
-      DISCORD_WEBHOOK: ${{ secrets.DISCORD_BUILD_WEBHOOK }}
+      DISCORD_BUILD_WEBHOOK: ${{ secrets.DISCORD_BUILD_WEBHOOK }}
