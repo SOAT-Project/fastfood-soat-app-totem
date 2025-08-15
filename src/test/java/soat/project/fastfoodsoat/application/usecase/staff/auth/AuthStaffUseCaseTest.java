@@ -6,11 +6,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import soat.project.fastfoodsoat.application.command.staff.auth.AuthStaffCommand;
 import soat.project.fastfoodsoat.application.gateway.StaffRepositoryGateway;
-import soat.project.fastfoodsoat.application.gateway.TokenService;
 import soat.project.fastfoodsoat.application.usecase.UseCaseTest;
 import soat.project.fastfoodsoat.domain.exception.DomainException;
 import soat.project.fastfoodsoat.domain.staff.Staff;
-import soat.project.fastfoodsoat.domain.token.Token;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +35,6 @@ class AuthStaffUseCaseTest extends UseCaseTest {
     void givenAValidCommandWithEmail_whenCallsAuthStaff_shouldReturnToken() {
         // Given
         final var staff = Staff.newStaff("john", "john@email.com", "12345678901", List.of());
-        final var token = new Token("token", "Bearer", 43200L, List.of());
 
         final var command = new AuthStaffCommand(staff.getEmail());
 
@@ -61,7 +58,6 @@ class AuthStaffUseCaseTest extends UseCaseTest {
     void givenAValidCommandWithCpf_whenCallsAuthStaff_shouldReturnToken() {
         // Given
         final var staff = Staff.newStaff("john", "john@email.com", "12345678901", List.of());
-        final var token = new Token("token", "Bearer", 43200L, List.of());
 
         final var command = new AuthStaffCommand(staff.getCpf().getValue());
 
