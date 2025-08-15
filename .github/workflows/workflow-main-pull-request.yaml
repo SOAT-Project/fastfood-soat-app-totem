@@ -16,7 +16,7 @@ jobs:
   notify:
     name: Notify
     if: ${{ always() }}
-    uses: ./.github/workflows/job-notify-pull-request.yaml@main
+    uses: ./.github/workflows/job-notify-pull-request.yaml
     with:
       pr_title: ${{ github.event.pull_request.title }}
       pr_number: ${{ github.event.pull_request.number }}
