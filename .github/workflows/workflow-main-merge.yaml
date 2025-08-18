@@ -1,0 +1,32 @@
+name: Workflow Main Merge
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  tests:
+    name: Tests
+    uses: ./.github/workflows/job-test.yaml
+
+  docker:
+    name: Docker
+    needs: tests
+    uses: ./.github/workflows/job-docker-build-push.yaml
+    with:
+      image_name: soatproject/fastfood-soat-app-totem
+      image_tag: latest
+    secrets:
+      DOCKERHUB_LOGIN: ${{ secrets.DOCKERHUB_LOGIN }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  notify:
+    name: Notify
+    needs: docker
+    if: ${{ always() }}
+    uses: ./.github/workflows/job-notify-build.yaml
+    with:
+      build_status: ${{ needs.docker.result }}
+    secrets:
+      DISCORD_BUILD_WEBHOOK: ${{ secrets.DISCORD_BUILD_WEBHOOK }}
