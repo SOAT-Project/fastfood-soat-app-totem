@@ -15,7 +15,7 @@ jobs:
 
   notify:
     name: Notify
-    if: ${{ always() }}
+    if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
     uses: ./.github/workflows/job-notify-pull-request.yaml
     with:
       pr_title: ${{ github.event.pull_request.title }}
