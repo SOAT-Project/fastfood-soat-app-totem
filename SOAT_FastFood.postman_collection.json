@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "c1053818-1b2c-49d4-83d3-5638026a3c86",
+		"_postman_id": "408093b7-3dbc-44e2-a622-2c2ffcb1c5c4",
 		"name": "SOAT_FastFood",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20774480"
+		"_exporter_id": "17495608"
 	},
 	"item": [
 		{
@@ -12,16 +12,6 @@
 				{
 					"name": "Create Product",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJyb2xlcyI6WyJBRE1JTiJdLCJpYXQiOjE3NTQxMDQyMTIsImV4cCI6MTc1NDE0NzQxMn0.gk8CGcm9APHuVMq5yoK_ZZ7joHHQ3ue2yRCnoxy9ckU",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -34,12 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/products",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/products",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"products"
@@ -62,21 +50,20 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/products",
+									"raw": "{{API_GATEWAY_URL}}/api/products",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Create Product - Acompanhamento",
@@ -93,21 +80,20 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/products",
+									"raw": "{{API_GATEWAY_URL}}/api/products",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Create Product - Bebida",
@@ -124,21 +110,20 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/products",
+									"raw": "{{API_GATEWAY_URL}}/api/products",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Create Product - Sobremesa",
@@ -155,37 +140,26 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/products",
+									"raw": "{{API_GATEWAY_URL}}/api/products",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
 				{
 					"name": "Update Product",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJyb2xlcyI6WyJBRE1JTiJdLCJpYXQiOjE3NTQxMDQyMTIsImV4cCI6MTc1NDE0NzQxMn0.gk8CGcm9APHuVMq5yoK_ZZ7joHHQ3ue2yRCnoxy9ckU",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -198,12 +172,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/products/:productId",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"products",
@@ -234,12 +206,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/products/:productId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products",
@@ -254,10 +224,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Product - Acompanhamento",
@@ -274,12 +244,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/products/:productId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products",
@@ -294,10 +262,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Product - Bebida",
@@ -314,12 +282,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/products/:productId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products",
@@ -334,10 +300,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Product - Sobremesa",
@@ -354,12 +320,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/products/:productId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"products",
@@ -374,10 +338,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
@@ -387,12 +351,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/products/:productId",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"products",
@@ -412,24 +374,13 @@
 				{
 					"name": "Delete Product",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJyb2xlcyI6WyJBRE1JTiJdLCJpYXQiOjE3NTQxMDQyMTIsImV4cCI6MTc1NDE0NzQxMn0.gk8CGcm9APHuVMq5yoK_ZZ7joHHQ3ue2yRCnoxy9ckU",
-									"type": "string"
-								}
-							]
-						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/products/:productId",
+							"raw": "{{API_GATEWAY_URL}}/api/products/:productId",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"products",
@@ -452,11 +403,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/products/category/:categoryId?page=0&per_page=10&sort=name&dir=asc&search=Cheese",
+							"raw": "{{API_GATEWAY_URL}}/api/products/category/:categoryId?page=0&per_page=10&sort=name&dir=asc&search=Cheese",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"products",
@@ -510,11 +460,14 @@
 				{
 					"name": "Create Client",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Nome do cliente\",\n    \"email\": \"nome.cliente@email.com\",\n    \"cpf\": \"12345678900\"\n}",
+							"raw": "{\n    \"name\": \"Nome do cliente\",\n    \"email\": \"nome.cliente@email.com\",\n    \"cpf\": \"12345678903\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -522,12 +475,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/clients",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/clients",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"clients"
@@ -550,22 +501,20 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/clients",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/clients",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"clients"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
@@ -584,12 +533,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/clients/identify",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/clients/identify",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"clients",
@@ -620,12 +567,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/orders",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/orders",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orders"
@@ -648,22 +593,20 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Create Order Without Client",
@@ -680,38 +623,26 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders"
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
 				{
 					"name": "Update Order Status",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJyb2xlcyI6WyJBRE1JTiJdLCJpYXQiOjE3NTQxMDQyMTIsImV4cCI6MTc1NDE0NzQxMn0.gk8CGcm9APHuVMq5yoK_ZZ7joHHQ3ue2yRCnoxy9ckU",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -724,12 +655,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/orders/:orderId",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/orders/:orderId",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orders",
@@ -760,12 +689,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders/:orderId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders/:orderId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders",
@@ -780,10 +707,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Order Status - IN_PREPARATION",
@@ -800,12 +727,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders/:orderId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders/:orderId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders",
@@ -820,10 +745,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Order Status - READY",
@@ -840,12 +765,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders/:orderId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders/:orderId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders",
@@ -860,10 +783,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						},
 						{
 							"name": "Update Order Status - COMPLETED",
@@ -880,12 +803,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/orders/:orderId",
-									"protocol": "http",
+									"raw": "{{API_GATEWAY_URL}}/api/orders/:orderId",
 									"host": [
-										"localhost"
+										"{{API_GATEWAY_URL}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"orders",
@@ -900,10 +821,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
@@ -913,12 +834,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/orders?only_paid=false&page=0&per_page=10&sort=orderNumber&dir=asc&search=",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/orders?only_paid=false&page=0&per_page=10&sort=orderNumber&dir=asc&search=",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orders"
@@ -965,12 +884,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/orders/staff?only_paid=false&page=0&per_page=10&sort=orderNumber&dir=asc&search=",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/orders/staff?only_paid=false&page=0&per_page=10&sort=orderNumber&dir=asc&search=",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"orders",
@@ -1024,12 +941,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/payments/qrcode?external_reference=d7ebf6a9-01db-47bb-b58c-bf873e46a0b4",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/payments/qrcode?external_reference=d7ebf6a9-01db-47bb-b58c-bf873e46a0b4",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"payments",
@@ -1053,12 +968,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/payments/status?external_reference=a93021f8-a72c-4fcd-b1aa-ec4ee377a95e",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/payments/status?external_reference=a93021f8-a72c-4fcd-b1aa-ec4ee377a95e",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"payments",
@@ -1096,12 +1009,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/webhooks/mercadopago",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/webhooks/mercadopago",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"webhooks",
@@ -1126,12 +1037,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/mock/simulate-mercadopago-webhook",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/mock/simulate-mercadopago-webhook",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"mock",
@@ -1145,13 +1054,23 @@
 			"description": "# 📬 Webhook de Pagamento - Mercado Pago\n\nAPI responsável por receber notificações de atualização de status de pagamento enviadas pelo Mercado Pago.\n\n**Base URL:** `/webhooks/mercadopago`  \n**Autenticação:** Não requer autenticação — uso exclusivo do Mercado Pago.\n\n---\n\n## 📥 Receber Notificação de Pagamento\n\n**POST** `/webhooks/mercadopago`  \nEndpoint chamado pelo Mercado Pago para envio de atualizações de status de pagamento.\n\n### 🔸 Body (JSON)\n\n``` json\n{\n  \"id\": \"1234567890\",\n  \"topic\": \"payment.created\",\n  \"resource\": \"https://api.mercadopago.com/v1/payments/1234567890\"\n}\n\n ```\n\n### 🔸 Campos\n\n| Campo | Tipo | Obrigatório | Descrição |\n| --- | --- | --- | --- |\n| `id` | string | Sim | Identificador externo do pagamento (`external_reference`) |\n| `topic` | string | Sim | Tipo de evento (ex: `payment.update`, `payment.created`, `payment.rejected`) |\n| `resource` | string | Sim | URL do recurso relacionado ao pagamento |\n\n### 🔸 Responses\n\n- `200 OK`: Notificação processada com sucesso\n    \n- `400 Bad Request`: Corpo da requisição inválido\n    \n- `404 Not Found`: Pagamento não encontrado\n    \n- `500 Internal Server Error`: Erro interno do servidor"
 		},
 		{
-			"name": "Staffs",
+			"name": "Auth",
 			"item": [
 				{
 					"name": "Auth Staff",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "authorizationToken",
+								"value": "yJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWVzdCIsInJvbGUiOiJVU0VSX0dVRVNUIiwibmFtZSI6Ikd1ZXN0IiwiaWF0IjoxNzU5NTQ2MTU3LCJleHAiOjE3NTk1NTMzNTd9.QQL5vxoyxXzYRhHMKBuDUup3BvQigBX6zwWx3tqV3aU",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"identification\": \"john.doe@email.com\"\n}",
@@ -1162,15 +1081,76 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/auths",
-							"protocol": "http",
+							"raw": "{{API_GATEWAY_URL}}/api/auths/staff",
 							"host": [
-								"localhost"
+								"{{API_GATEWAY_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
-								"auths"
+								"auths",
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Client (Guest)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_GATEWAY_URL}}/api/auths/client",
+							"host": [
+								"{{API_GATEWAY_URL}}"
+							],
+							"path": [
+								"api",
+								"auths",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Client",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identification\": \"12345678900\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_GATEWAY_URL}}/api/auths/client",
+							"host": [
+								"{{API_GATEWAY_URL}}"
+							],
+							"path": [
+								"api",
+								"auths",
+								"client"
 							]
 						}
 					},
@@ -1178,6 +1158,40 @@
 				}
 			],
 			"description": "# 🔐 Auth Staff API\n\nAPI responsável por autenticar funcionários e gerar token de autenticação.\n\n> **Base URL:** `/auths`  \n**Autenticação:** Não requerida para esta rota. \n  \n\n---\n\n## 🧑‍💼 Autenticar Funcionário\n\n**POST** `/auths`\n\nAutentica um funcionário com base nas credenciais fornecidas e retorna um token JWT.\n\n- `200 OK`: Token de autenticação retornado com sucesso\n    \n- `404 Not Found`: Funcionário não encontrado\n    \n- `422 Unprocessable Entity`: Erro de validação (ex: campos vazios)\n    \n- `500 Internal Server Error`\n    \n\n---"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AUTHORIZATION_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
