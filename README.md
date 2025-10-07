@@ -6,7 +6,20 @@ Este projeto é uma API RESTful para um sistema de pedidos de fast food, desenvo
 
 A aplicação pode ser executada de diversas formas. Confira abaixo as opções disponíveis e a documentação detalhada para cada uma:
 
+### Executar localmente
 - [📄 Deploy com Docker](./docs/docker.md)
+
+### Pipeline integrada ao DockerHub
+
+Esta aplicação possui uma imagem Docker, assim como uma pipeline de CI/CD configurada para deploy automático no DockerHub a cada push na branch `main`.
+
+Esta pipeline realiza as seguintes etapas:
+
+1. **Teste**: Executa e valida todos os testes unitários do projeto.
+2. **Build**: Compila o projeto e cria a imagem Docker.
+3. **Trivy**: Valida as vulnerabilidades da imagem Docker.
+4. **Push**: Envia a imagem Docker para o DockerHub.
+5. **Notificação**: Envia uma notificação no Discord informando sobre o sucesso ou falha do deploy.
 
 ## 🧪 Testes
 
